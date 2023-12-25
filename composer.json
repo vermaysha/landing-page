@@ -12,6 +12,7 @@
         "laravel/tinker": "^2.8"
     },
     "require-dev": {
+        "barryvdh/laravel-ide-helper": "^2.13",
         "fakerphp/faker": "^1.9.1",
         "laravel/pint": "^1.0",
         "laravel/sail": "^1.18",
@@ -45,6 +46,19 @@
         ],
         "post-create-project-cmd": [
             "@php artisan key:generate --ansi"
+        ],
+        "ide-helper": [
+            "./vendor/bin/sail artisan ide-helper:generate -q",
+            "./vendor/bin/sail artisan ide-helper:meta -q",
+            "./vendor/bin/sail artisan ide-helper:models -Mq"
+        ],
+        "format": [
+            "./vendor/bin/pint",
+            "npx blade-formatter --write resources/views/**/**/**/**/**/*.blade.php"
+        ],
+        "lint": [
+            "./vendor/bin/pint --test",
+            "npx blade-formatter -c resources/views/**/**/**/**/**/*.blade.php"
         ]
     },
     "extra": {
