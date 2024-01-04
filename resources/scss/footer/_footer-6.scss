@@ -1,0 +1,190 @@
+/* =============================
+    FOOTER-6 CSS
+================================ */
+
+.footer-style-6 {
+    background: $gray;
+    padding-top: 80px;
+
+    .subscribe-wrapper {
+      margin-bottom: 60px;
+      text-align: center;
+
+      .subscribe-form-wrapper {
+        h4 {
+          color: $body-color;
+          font-weight: $font-weight-600;
+        }
+
+        form {
+          position: relative;
+
+          input {
+            width: 100%;
+            height: 64px;
+            line-height: 1;
+            padding: 0 25px;
+            border-radius: $radius-50;
+            border: 1px solid transparent;
+
+            &::placeholder {
+              opacity: .6;
+              color: $body-color;
+            }
+
+            &:focus {
+              border-color: $primary-color;
+            }
+          }
+
+          button {
+            position: absolute;
+            right: 0px;
+            top: 0;
+
+            @media #{$xs} {
+              position: static;
+              margin-top: 20px;
+            }
+
+            @media #{$sm} {
+              position: absolute;
+              margin-top: 0;
+            }
+          }
+        }
+      }
+
+      .widget-wrapper {
+        .left-wrapper {
+          padding: 30px 0;
+
+          ul {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+
+            @media #{$xs} {
+              justify-content: center;
+            }
+
+            li {
+              a {
+                margin-right: 30px;
+                color: $body-color;
+
+                @media #{$xs} {
+                  margin: 0 10px;
+                }
+
+                &:hover {
+                  color: $primary-color;
+                }
+              }
+            }
+          }
+        }
+
+        .right-wrapper {
+          padding: 30px 0;
+
+          .socials {
+            justify-content: flex-end;
+
+            @media #{$xs} {
+              justify-content: center;
+            }
+
+            li {
+              a {
+                width: 44px;
+                height: 44px;
+                font-size: 20px;
+                background: rgba($primary-color, 0.4);
+
+                @media #{$xs} {
+                  margin: 0 8px;
+                }
+
+                &:hover {
+                  background: $primary-color;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .copyright-wrapper {
+      border-top: 1px solid rgba($body-color, 0.4);
+      padding: 20px 0;
+
+      p {
+        font-size: $caption-font-size;
+        font-weight: $font-weight-500;
+        text-align: center;
+        color: rgba($body-color, 0.6);
+
+        a {
+          color: inherit;
+
+          &:hover {
+            color: $primary-color;
+          }
+        }
+      }
+    }
+
+    &.footer-dark {
+      background: $heading-color;
+
+      .subscribe-wrapper {
+        .subscribe-form-wrapper {
+          h4 {
+            color: $white;
+          }
+
+          p {
+            color: $white;
+          }
+        }
+
+        .widget-wrapper {
+          .left-wrapper {
+            ul {
+              li {
+                a {
+                  color: $white;
+
+                  &:hover {
+                    color: $primary-color;
+                  }
+                }
+              }
+            }
+          }
+
+          .right-wrapper {
+            ul {
+              li {
+                a {
+                  background: rgba($white, 0.1);
+
+                  &:hover {
+                    background: $primary-color;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .copyright-wrapper {
+        p {
+          color: rgba($white, 0.8);
+        }
+      }
+    }
+  }

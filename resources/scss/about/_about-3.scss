@@ -1,0 +1,93 @@
+/* =============================
+    ABOUT-3 CSS
+================================ */
+.about-style-3 {
+    background: $gray;
+    padding: 100px 0;
+
+    @media #{$md}, #{$xs} {
+        .about-image {
+            margin-bottom: 50px;
+        }
+    }
+
+    .about-image img {
+        max-width: 100%;
+    }
+
+    @media #{$desktop} {
+        .about-content-wrapper {
+            margin-left: 85px;
+        }
+    }
+
+    @media #{$laptop} {
+        .about-content-wrapper {
+            margin-left: 50px;
+        }
+    }
+
+    .about-content-wrapper {
+        .counter-up-wrapper {
+            background: #EAEAEA;
+            border-radius: 5px;
+            padding: 20px 0px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+
+            .single-counter {
+                text-align: center;
+                position: relative;
+
+                @media #{$xs} {
+                    padding: 10px;
+                }
+
+                &:last-child::after {
+                    display: none;
+                }
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    height: 100%;
+                    background: $heading-color;
+                    width: 2px;
+                    top: 0;
+                    right: -35px;
+                }
+
+                @media #{$md} {
+                    &::after {
+                        right: -60px;
+                    }
+                }
+
+                @media #{$xs} {
+                    &::after {
+                        display: none;
+                    }
+                }
+
+                h4 {
+                    margin-bottom: 10px;
+
+                    @media #{$lg}, #{$xs} {
+                        font-size: 24px;
+                    }
+                }
+
+                h6 {
+                    color: $heading-color;
+                    font-weight: 500;
+
+                    @media #{$lg}, #{$xs} {
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+    }
+}

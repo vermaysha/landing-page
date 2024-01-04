@@ -1,0 +1,74 @@
+/* =============================
+    TESTIMONIAL-6 CSS
+================================ */
+.testimonial-style-6 {
+    padding: 100px 0;
+
+    .single-testimonial {
+        &:hover {
+            .content-wrapper {
+                border-color: $primary-color;
+                @include box-shadow($box-shadow-2);
+            }
+        }
+
+        .content-wrapper {
+            background: $white;
+            border-radius: $radius-10;
+            padding: 35px 24px;
+            @include transition(0.3s);
+            text-align: center;
+            border-bottom: 5px solid $heading-color;
+            @include box-shadow($box-shadow);
+            margin-bottom: 30px;
+
+            .content {
+                position: relative;
+                z-index: 1;
+
+                p {
+                    font-size: $h6-font-size;
+                    line-height: 30px;
+                    margin-bottom: 35px;
+                }
+
+                .socials {
+                    li {
+                        a {
+                            background: $heading-color;
+
+                            &:hover {
+                                background: $primary-color;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .info {
+                margin-bottom: 30px;
+
+                .image {
+                    max-width: 120px;
+                    width: 100%;
+                    height: 120px;
+                    border-radius: $radius-full;
+                    margin: auto;
+                    margin-bottom: 20px;
+                    overflow: hidden;
+
+                    img {
+                        width: 100%;
+                    }
+                }
+
+                .text {
+                    p {
+                        font-size: $caption-font-size;
+                        font-weight: $font-weight-500;
+                    }
+                }
+            }
+        }
+    }
+}

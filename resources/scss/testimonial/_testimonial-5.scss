@@ -1,0 +1,101 @@
+/* =============================
+    TESTIMONIAL-5 CSS
+================================ */
+.testimonial-style-5 {
+    padding: 100px 0;
+
+    .testimonial-active-wrapper {
+        position: relative;
+
+        .tns-nav {
+            position: absolute;
+            width: 100%;
+            left: 0;
+            bottom: 0;
+            @include flex-center;
+            z-index: 1;
+
+            button {
+                border: none;
+                width: 15px;
+                height: 15px;
+                border-radius: $radius-full;
+                background: rgba($primary-color, 0.2);
+                margin: 0 8px;
+
+                &.tns-nav-active {
+                    background: $primary-color;
+                }
+            }
+        }
+
+        .testimonial-active {
+            .single-testimonial {
+                margin-bottom: 70px;
+
+                &:hover {
+                    .content-wrapper {
+                        @include box-shadow($box-shadow);
+                    }
+                }
+
+                .content-wrapper {
+                    background: $white;
+                    border: 1px solid $border-color;
+                    border-radius: $radius-10;
+                    padding: 35px 24px;
+                    @include transition(0.3s);
+                    text-align: center;
+                    position: relative;
+                    z-index: 1;
+
+                    .quote {
+                        position: absolute;
+                        width: 90px;
+                        height: 90px;
+                        top: 40px;
+                        left: 45px;
+                        font-size: 90px;
+                        line-height: 1;
+                        color: rgba($body-color, 0.1);
+                        z-index: -1;
+                    }
+
+                    .content {
+                        position: relative;
+                        z-index: 1;
+
+                        p {
+                            font-size: $h6-font-size;
+                            line-height: 30px;
+                        }
+                    }
+
+                    .info {
+                        margin-bottom: 25px;
+
+                        .image {
+                            max-width: 48px;
+                            width: 100%;
+                            height: 48px;
+                            border-radius: $radius-full;
+                            margin: auto;
+                            margin-bottom: 15px;
+                            overflow: hidden;
+
+                            img {
+                                width: 100%;
+                            }
+                        }
+
+                        .text {
+                            p {
+                                font-size: $caption-font-size;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

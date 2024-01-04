@@ -1,0 +1,67 @@
+/* =============================
+    PRICING-3 CSS
+================================ */
+.pricing-style-3 {
+    padding: 100px 0 60px;
+    background: #f3f3f3;
+
+    .pricing-table-wrapper {
+        .pricing-table {
+            table.table {
+                > :not(:last-child) > :last-child > * {
+                    border-color: #dee2e6;
+                }
+
+                > :not(caption) > * > * {
+                    padding: 25px 10px;
+                    border-right: 1px solid #dee2e6;
+                }
+
+                tr:last-child td {
+                    border-bottom: none;
+                }
+
+                tr th,
+                tr td {
+                    min-width: 200px;
+                    vertical-align: middle;
+                }
+
+                tr th {
+                    text-align: center;
+
+                    h6 {
+                        margin-bottom: 14px;
+                    }
+
+                    h3 {
+                        color: #2f80ed;
+
+                        span {
+                            font-size: 20px;
+                        }
+                    }
+
+                    p {
+                        font-weight: 500;
+                        color: #323450;
+                    }
+                }
+
+                tr td.pricing-button {
+                    text-align: center;
+                }
+
+                tr td p.icon {
+                    text-align: center;
+                    color: #585978;
+                    font-weight: 700;
+
+                    &.active {
+                        color: #2f80ed;
+                    }
+                }
+            }
+        }
+    }
+}

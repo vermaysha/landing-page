@@ -1,0 +1,60 @@
+/* =============================
+    TESTIMONIAL-3 CSS
+================================ */
+.testimonial-style-3 {
+    .testimonial-active-wrapper {
+        position: relative;
+
+        .tns-controls {
+            position: absolute;
+            width: 100%;
+            left: 0;
+            bottom: 0;
+            z-index: 1;
+
+            &:focus {
+                outline: none;
+            }
+
+            button {
+                border: none;
+                width: 45px;
+                height: 45px;
+                border-radius: $radius-3;
+                background: rgba($primary-color, 0.2);
+                margin-right: 30px;
+
+                &:hover {
+                    background: $primary-color;
+                    color: $white;
+                }
+            }
+        }
+    }
+
+    .testimonial-active-3 {
+        .single-testimonial {
+            margin: 70px 0;
+
+            .content {
+                p {
+                    font-family: $heading-font;
+                    font-size: $h6-font-size;
+                    line-height: 30px;
+                    margin-bottom: 20px;
+                }
+            }
+
+            .info {
+                h5 {
+                    font-weight: $font-weight-600;
+                }
+
+                p {
+                    font-size: $caption-font-size;
+                    font-weight: $font-weight-500;
+                }
+            }
+        }
+    }
+}

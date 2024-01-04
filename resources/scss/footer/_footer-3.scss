@@ -1,0 +1,184 @@
+/* =============================
+    FOOTER-3 CSS
+================================ */
+
+.footer-style-3 {
+    background: $gray;
+    padding-top: 80px;
+
+    .subscribe-wrapper {
+        margin-bottom: 60px;
+        text-align: center;
+
+        .subscribe-form-wrapper {
+            h4 {
+                color: $body-color;
+                margin-bottom: 45px;
+                font-weight: $font-weight-600;
+            }
+
+            form {
+                input {
+                    max-width: 550px;
+                    width: 100%;
+                    height: 64px;
+                    line-height: 1;
+                    padding: 0 25px;
+                    border-radius: $radius-3;
+                    border: 1px solid transparent;
+                    margin-right: 30px;
+
+                    @media #{$laptop} {
+                        max-width: 528px;
+                    }
+
+                    @media #{$md} {
+                        max-width: 488px;
+                    }
+
+                    @media #{$xs} {
+                        margin-right: 0;
+                        margin-bottom: 30px;
+                    }
+
+                    &::placeholder {
+                        opacity: 0.6;
+                        color: $body-color;
+                    }
+
+                    &:focus {
+                        border-color: $primary-color;
+                    }
+                }
+            }
+        }
+
+        .widget-wrapper {
+            .footer-widget {
+                margin-bottom: 50px;
+
+                .logo {
+                    margin-bottom: 30px;
+                }
+
+                p.desc {
+                    margin-bottom: 30px;
+                }
+
+                .socials {
+                    justify-content: flex-start;
+
+                    li {
+                        a {
+                            background: rgba($primary-color, 0.4);
+                            margin: 0;
+                            margin-right: 10px;
+                            width: 44px;
+                            height: 44px;
+                            font-size: 20px;
+
+                            &:hover {
+                                background: $primary-color;
+                            }
+                        }
+                    }
+                }
+
+                h6 {
+                    font-weight: $font-weight-600;
+                    color: $body-color;
+                    margin-bottom: 35px;
+                    margin-top: 10px;
+                }
+
+                .links {
+                    li {
+                        a {
+                            font-size: $body-font-size;
+                            line-height: 32px;
+                            color: $body-color;
+
+                            &:hover {
+                                color: $primary-color;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .copyright-wrapper {
+            border-top: 1px solid rgba($body-color, 0.4);
+            padding: 20px 0;
+
+            p {
+                font-size: $caption-font-size;
+                font-weight: $font-weight-500;
+                text-align: center;
+                color: rgba($body-color, 0.6);
+
+                a {
+                    color: inherit;
+
+                    &:hover {
+                        color: $primary-color;
+                    }
+                }
+            }
+        }
+    }
+
+    &.footer-dark {
+        background: $heading-color;
+
+        .subscribe-wrapper {
+            .subscribe-form-wrapper {
+                h4 {
+                    color: $white;
+                }
+            }
+
+            .widget-wrapper {
+                .footer-widget {
+                    p {
+                        color: $white;
+                    }
+
+                    h6 {
+                        color: $white;
+                    }
+
+                    .socials {
+                        li {
+                            a {
+                                background: rgba($white, 0.1);
+
+                                &:hover {
+                                    background: $primary-color;
+                                }
+                            }
+                        }
+                    }
+
+                    .links {
+                        li {
+                            a {
+                                color: $white;
+
+                                &:hover {
+                                    color: $primary-color;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .copyright-wrapper {
+                p {
+                    color: rgba($white, 0.8);
+                }
+            }
+        }
+    }
+}

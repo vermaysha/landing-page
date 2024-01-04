@@ -1,0 +1,151 @@
+/* =============================
+    HERO-6 CSS
+================================ */
+.hero-section-wrapper-6 {
+    background: $white;
+    position: relative;
+
+    .header {
+      position: absolute;
+      width: 100%;
+      top: 0;
+      left: 0;
+      z-index: 2;
+      background: transparent;
+
+      &.sticky {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 2;
+        background: $white;
+        @include box-shadow($box-shadow);
+      }
+    }
+
+    .hero-style-6 {
+      position: relative;
+      z-index: 1;
+      padding: 270px 0;
+
+      @media #{$laptop} {
+        padding: 200px 0;
+      }
+
+      @media #{$lg} {
+        padding: 200px 0;
+      }
+
+      @media #{$md}, #{$xs} {
+        padding: 100px 0 0;
+      }
+
+      .hero-content-wrapper {
+        padding: 50px 0;
+
+        h2 {
+          margin-bottom: 30px;
+
+          @media #{$laptop} {
+            font-size: 55px;
+            line-height: 65px;
+          }
+
+          @media #{$lg} {
+            font-size: 47px;
+            line-height: 58px;
+          }
+
+          @media #{$xs} {
+            font-size: 40px;
+            line-height: 50px;
+          }
+
+          @media #{$sm} {
+            font-size: 47px;
+            line-height: 58px;
+          }
+        }
+
+        p {
+          @media #{$desktop}, #{$laptop} {
+            padding-right: 100px;
+          }
+
+          @media #{$lg} {
+            padding-right: 30px;
+          }
+
+          @media #{$md} {
+            padding-right: 100px;
+          }
+        }
+      }
+
+      .hero-image {
+        margin-bottom: 100px;
+        position: absolute;
+        left: 10px;
+        top: 50%;
+        @include transform(translateY(-50%));
+        width: 48%;
+
+        @media #{$laptop} {
+          width: 40%;
+        }
+
+        @media #{$md}, #{$xs} {
+          width: 100%;
+          position: static;
+          @include transform(translateY(0));
+        }
+
+        img {
+          max-width: 100%;
+        }
+      }
+
+      .shapes {
+        .shape {
+          position: absolute;
+          z-index: -1;
+
+          &.bg-shape {
+            top: 0;
+            left: 0;
+          }
+
+          &.shape-1 {
+            top: 25%;
+            right: 8%;
+          }
+
+          &.shape-2 {
+            top: 45%;
+            right: 30%;
+          }
+
+          &.shape-3 {
+            right: 25%;
+            bottom: 35%;
+          }
+
+          &.shape-4 {
+            left: 48%;
+            bottom: 0;
+          }
+
+          &.shape-5 {
+            left: 52%;
+            bottom: 70px;
+          }
+
+          &.shape-6 {
+            right: 0;
+            bottom: 0;
+          }
+        }
+      }
+    }
+  }

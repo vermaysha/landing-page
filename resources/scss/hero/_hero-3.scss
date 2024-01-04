@@ -1,0 +1,144 @@
+/* =============================
+    HERO-3 CSS
+================================ */
+.hero-section-wrapper-3 {
+    position: relative;
+    background: $white;
+
+    .header {
+        position: absolute;
+        width: 100%;
+        top: 0;
+        left: 0;
+        z-index: 2;
+        background: transparent;
+
+        &.sticky {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 2;
+            background: $white;
+            @include box-shadow(0px 0px 5px rgba(0, 0, 0, 0.1));
+        }
+    }
+
+    .hero-style-3 {
+        position: relative;
+        z-index: 1;
+        background-position: top center;
+
+        .hero-content-wrapper {
+            padding: 175px 0 0px;
+            text-align: center;
+
+            @media #{$xs} {
+                padding: 150px 0 0;
+            }
+
+            .content {
+                margin-bottom: 30px;
+
+                h2 {
+                    font-weight: $font-weight-500;
+                    margin-bottom: 30px;
+
+                    @media #{$lg} {
+                        font-size: 55px;
+                        line-height: 65px;
+                    }
+
+                    @media #{$md} {
+                        font-size: 47px;
+                        line-height: 58px;
+                    }
+
+                    @media #{$xs} {
+                        font-size: 40px;
+                        line-height: 50px;
+                    }
+
+                    @media #{$sm} {
+                        font-size: 47px;
+                        line-height: 58px;
+                    }
+                }
+
+                p {
+                    padding: 0 80px;
+
+                    @media #{$md} {
+                        padding: 0 10px;
+                    }
+
+                    @media #{$xs} {
+                        padding: 0 10px;
+                    }
+                }
+
+                .buttons {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-wrap: wrap;
+
+                    .button {
+                        margin: 10px 20px;
+                    }
+                }
+            }
+
+            .image img {
+                max-width: 100%;
+            }
+        }
+
+        .shapes {
+            .shape {
+                position: absolute;
+                z-index: -1;
+
+                &.shape-1 {
+                    top: 20%;
+                    left: 5%;
+                }
+
+                &.shape-2 {
+                    top: 50%;
+                    left: 8%;
+                }
+
+                &.shape-3 {
+                    top: 48%;
+                    left: 25%;
+                }
+
+                &.shape-4 {
+                    bottom: 5%;
+                    left: 25%;
+                }
+
+                &.shape-5 {
+                    top: 10%;
+                    right: 5%;
+                }
+
+                &.shape-6 {
+                    top: 50%;
+                    right: 25%;
+                }
+
+                &.shape-7 {
+                    bottom: 15%;
+                    right: 25%;
+                }
+
+                &.shape-8 {
+                    bottom: 10%;
+                    right: 10%;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,74 @@
+/* =============================
+    GALLERY-6 CSS
+================================ */
+
+.gallery-style-6 {
+    padding: 100px 0 70px;
+    background: $gray;
+
+    .portfolio-button-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      margin-bottom: 52px;
+
+      button {
+        border: 1px solid $primary-color;
+        background: transparent;
+        color: $primary-color;
+        padding: 5px 25px;
+        border-radius: 30px;
+        margin: 8px;
+
+        &.active {
+          background: $primary-color;
+          color: $white;
+        }
+      }
+    }
+
+    .grid-sizer,
+    .single-item {
+      width: 25%;
+    }
+
+    @media #{$md} {
+      .grid-sizer,
+      .single-item {
+        width: 50%;
+      }
+    }
+
+    @media #{$xs} {
+      .grid-sizer,
+      .single-item {
+        width: 100%;
+      }
+    }
+
+    .item-size--double {
+      width: 50%;
+    }
+
+    @media #{$xs} {
+      .item-size--double {
+        width: 100%;
+      }
+    }
+
+    .single-gallery {
+      position: relative;
+      overflow: hidden;
+      z-index: 1;
+      margin: 0 15px 30px;
+      border-radius: $radius-10;
+
+      &:hover {
+        .overlay {
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+    }
+  }

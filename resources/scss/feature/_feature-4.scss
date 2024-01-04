@@ -1,0 +1,64 @@
+/* =============================
+    FEATURE-4 CSS
+================================ */
+.feature-style-4 {
+    background: $white;
+    padding: 100px 0px 70px;
+
+    .-mt-30 {
+        margin-top: -30px;
+    }
+
+    .single-feature {
+        padding: 45px 30px;
+        border-radius: $radius-10;
+        margin-bottom: 30px;
+        @include box-shadow($box-shadow-2);
+
+        @media #{$lg} {
+            padding: 40px 20px;
+        }
+
+        .icon {
+            width: 78px;
+            height: 78px;
+            border-radius: $radius-full;
+            background: $primary-color;
+            color: $white;
+            font-size: 35px;
+            @include flex-center;
+            margin-bottom: 25px;
+        }
+
+        .content {
+            h5 {
+                font-weight: $font-weight-600;
+                margin-bottom: 25px;
+            }
+        }
+    }
+
+    .feature-content {
+        margin-bottom: 70px;
+
+        @media #{$desktop} {
+            padding-left: 50px;
+        }
+
+        @media #{$laptop} {
+            padding-left: 30px;
+        }
+
+        h4 {
+            @media #{$lg} {
+                font-size: 20px;
+            }
+        }
+
+        h3 {
+            @media #{$lg} {
+                font-size: 34px;
+            }
+        }
+    }
+}
