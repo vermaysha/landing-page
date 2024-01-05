@@ -1,5 +1,8 @@
 <?php
 
+use App\Http\Controllers\Dashboard\AuthController;
+use App\Http\Controllers\Dashboard\HomeController;
+use App\Http\Controllers\Dashboard\TestimonialController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -26,4 +29,34 @@ Route::middleware(['guest'])
 
         Route::get('/template', function () { return view('landing-page.template.template');})
             ->name('template');
+    });
+
+Route::middleware(['auth'])
+    ->prefix('dashboard')
+    ->name('dashboard.')
+    ->group(function () {
+        Route::controller(HomeController::class)
+            ->group(function () {
+                Route::get('/', 'index')->name('home');
+            });
+
+        Route::controller(TestimonialController::class)
+            ->prefix('testimonial')
+            ->name('testimonial.')
+            ->group(function () {
+                Route::get('/', 'index')->name('index');
+                Route::post('/', 'store')->name('store');
+                Route::post('/toggle/{id}', 'toggle')->name('toggle');
+                Route::post('/{id}', 'update')->name('update');
+                Route::delete('/{id}', 'delete')->name('delete');
+            });
+    });
+
+Route::controller(AuthController::class)
+    ->prefix('dashboard')
+    ->name('dashboard.')
+    ->group(function () {
+        Route::get('/login', 'login')->name('login')->middleware('guest');
+        Route::post('/login', 'authenticate')->name('login.post')->middleware('guest');
+        Route::get('/logout', 'logout')->name('logout')->middleware('auth');
     });
