@@ -2,7 +2,9 @@
 
 namespace App\Providers;
 
+use Illuminate\Pagination\Paginator;
 use Illuminate\Support\ServiceProvider;
+use Rawilk\Settings\Facades\Settings;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -19,6 +21,13 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        //
+        Paginator::useBootstrapFive();
+
+        $settings = Settings::all(['app.name', 'app.url', 'app.debug'])
+            ->map(fn ($setting) => [$setting->key => $setting->value])
+            ->collapse()
+            ->toArray();
+
+        config($settings);
     }
 }
