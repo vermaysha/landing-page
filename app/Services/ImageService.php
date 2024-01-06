@@ -5,8 +5,7 @@ namespace App\Services;
 use Illuminate\Http\UploadedFile;
 use Intervention\Image\ImageManager;
 use Intervention\Image\Drivers\Gd\Driver;
-use SplFileObject;
-use SplTempFileObject;
+use Intervention\Image\Interfaces\ImageInterface;
 
 class ImageService
 {
@@ -47,6 +46,45 @@ class ImageService
 
         $image->cover($width, $height);
 
+        return $this->_toWebp($image);
+    }
+
+    /**
+     * Resize the image to the specified width and height.
+     *
+     * @param int $width The width to resize the image to.
+     * @param int|null $height The optional height to resize the image to. Default is null.
+     * @return string The path to the resized image in webp format.
+     */
+    public function resize(int $width = null, int $height = null): string
+    {
+        $image = $this->imageManager->read($this->image);
+
+        $image->scaleDown($width, $height);
+
+        return $this->_toWebp($image);
+    }
+
+    /**
+     * Converts the image to WebP format.
+     *
+     * @return string The path of the converted image.
+     */
+    public function toWebP(): string
+    {
+        $image = $this->imageManager->read($this->image);
+        return $this->_toWebp($image);
+    }
+
+    /**
+     * Converts an image to WebP format and returns the WebP string.
+     *
+     * @param ImageInterface &$image The image object to be converted.
+     * @throws Some_Exception_Class A description of the exception that can be thrown.
+     * @return string The WebP string representation of the converted image.
+     */
+    private function _toWebp(ImageInterface &$image): string
+    {
         $webp = $image->toWebp()->toString();
 
         fclose($this->image);

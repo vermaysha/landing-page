@@ -27,6 +27,20 @@
     </style>
     <script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js"
         integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
+    <script>
+        function preview(event, id) {
+            const previewImage = document.getElementById(id);
+            if (event.target.files.length > 0) {
+                previewImage.querySelector('img').src = URL.createObjectURL(
+                    event.target.files[0],
+                );
+
+                previewImage.style.display = 'block';
+            } else {
+                previewImage.style.display = 'none';
+            }
+        }
+    </script>
     @stack('head')
     @vite('resources/js/app.js')
 </head>
@@ -75,6 +89,16 @@
                                 </span>
                                 <span class="nav-link-title">
                                     Plan
+                                </span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('dashboard.portfolio.index') }}">
+                                <span class="nav-link-icon d-md-none d-lg-inline-block">
+                                    <div class="icon ti ti-file-star"></div>
+                                </span>
+                                <span class="nav-link-title">
+                                    Portfolio
                                 </span>
                             </a>
                         </li>

@@ -14,7 +14,7 @@
                             <div class="mb-3">
                                 <label class="form-label">Title</label>
                                 <input type="text" class="form-control" placeholder="Plan title" required
-                                    name="title" {{ old('title') }}>
+                                    name="title" value="{{ old('title') }}">
                             </div>
                         </div>
                         <div class="col-lg-6">

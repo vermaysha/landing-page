@@ -164,20 +164,6 @@
 
 @push('foot')
     <script>
-        function preview(event, id) {
-            const previewImage = document.getElementById(id);
-            if (event.target.files.length > 0) {
-                previewImage.querySelector('img').src = URL.createObjectURL(
-                    event.target.files[0],
-                );
-
-                previewImage.style.display = 'block';
-            } else {
-                previewImage.style.display = 'none';
-            }
-        }
-    </script>
-    <script>
         function randomNumber(min, max) {
             return Math.floor(Math.random() * (max - min + 1)) + min;
         }

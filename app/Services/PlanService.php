@@ -78,7 +78,11 @@ class PlanService
 
         if ($result) {
             if (isset($data['plan'])) {
-                if (isset($data['plan']['icon_file']) && is_string($data['plan']['icon_file'])) {
+                if (
+                    isset($data['plan']['icon_file']) &&
+                    $data['plan']['icon_file'] instanceof UploadedFile &&
+                    is_string($data['plan']['icon_file'])
+                ) {
                     Storage::disk('public')->delete($oldFile);
                 }
             }
@@ -114,10 +118,16 @@ class PlanService
      */
     public function delete(Plan $plan): bool|null
     {
-        return DB::transaction(function () use ($plan) {
+        $delete = DB::transaction(function () use ($plan) {
             $plan->items()->delete();
             return $plan->delete();
         });
+
+        if ($delete) {
+            Storage::disk('public')->delete($plan->icon_file);
+        }
+
+        return $delete;
     }
 
     /**

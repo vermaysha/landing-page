@@ -3,6 +3,7 @@
 use App\Http\Controllers\Dashboard\AuthController;
 use App\Http\Controllers\Dashboard\HomeController;
 use App\Http\Controllers\Dashboard\PlanController;
+use App\Http\Controllers\Dashboard\PortfolioController;
 use App\Http\Controllers\Dashboard\TestimonialController;
 use Illuminate\Support\Facades\Route;
 
@@ -60,6 +61,16 @@ Route::middleware(['auth'])
                 Route::post('/', 'store')->name('store');
                 Route::post('/toggle-popular/{id}', 'togglePopular')->name('togglePopular');
                 Route::post('/toggle-show-on-homepage/{id}', 'toggleShowOnHomepage')->name('toggleShowOnHomepage');
+                Route::post('/{id}', 'update')->name('update');
+                Route::delete('/{id}', 'delete')->name('delete');
+            });
+
+        Route::controller(PortfolioController::class)
+            ->prefix('portfolio')
+            ->name('portfolio.')
+            ->group(function () {
+                Route::get('/', 'index')->name('index');
+                Route::post('/', 'store')->name('store');
                 Route::post('/{id}', 'update')->name('update');
                 Route::delete('/{id}', 'delete')->name('delete');
             });
