@@ -23,6 +23,7 @@ class DatabaseSeeder extends Seeder
             SettingSeeder::class,
             UserSeeder::class,
             TestimonialSeeder::class,
+            PlanSeeder::class,
         ]);
     }
 }
