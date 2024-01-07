@@ -14,61 +14,31 @@
             </div>
         </div>
         <div class="row justify-content-center">
+            @foreach ($pricings as $row)
             <div class="col-lg-4 col-md-8 col-sm-10">
                 <div class="single-pricing wow fadeInUp" data-wow-delay=".2s"
                     style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
-                    <div class="image">
-                        <img src="{{ Vite::asset('resources/img/home/pricing-1.svg') }}" alt="">
-                    </div>
-                    <h6>Basic Design</h6>
-                    <h4>Web Design</h4>
-                    <h3>$ 29.00</h3>
-                    <ul>
-                        <li> <i class="lni lni-checkmark-circle"></i> Carefully crafted components</li>
-                        <li> <i class="lni lni-checkmark-circle"></i> Amazing page examples</li>
-                        <li> <i class="lni lni-checkmark-circle"></i> Super friendly support team</li>
-                        <li> <i class="lni lni-checkmark-circle"></i> Awesome Support</li>
-                    </ul>
-                    <a href="#0" class="button radius-30">Get Started</a>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-8 col-sm-10">
-                <div class="single-pricing active wow fadeInUp" data-wow-delay=".4s"
-                    style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInUp;">
+                    @if ($row->is_popular)
                     <span class="button button-sm radius-30 popular-badge">Popular</span>
+                    @endif
                     <div class="image">
-                        <img src="{{ Vite::asset('resources/img/home/pricing-2.svg') }}" alt="">
+                        <img src="{{ asset('storage/' . $row->icon_file) }}" alt="{{ $row->title }}">
                     </div>
-                    <h6>Standard Design</h6>
-                    <h4>Web Development</h4>
-                    <h3>$ 89.00</h3>
+                    <h6>{{ $row->title }}</h6>
+                    <h4>{{ $row->subtitle }}</h4>
+                    <h3>{{ rupiah($row->price) }}</h3>
                     <ul>
-                        <li> <i class="lni lni-checkmark-circle"></i> Carefully crafted components</li>
-                        <li> <i class="lni lni-checkmark-circle"></i> Amazing page examples</li>
-                        <li> <i class="lni lni-checkmark-circle"></i> Super friendly support team</li>
-                        <li> <i class="lni lni-checkmark-circle"></i> Awesome Support</li>
+                        @foreach ($row->items as $item)
+                            <li @class(['text-danger' => !$item->is_checked])>
+                                <i @class(['lni', 'lni-checkmark-circle' => $item->is_checked, 'lni-cross-circle text-danger' => !$item->is_checked])></i>
+                                {{ $item->content }}
+                            </li>
+                        @endforeach
                     </ul>
                     <a href="#0" class="button radius-30">Get Started</a>
                 </div>
             </div>
-            <div class="col-lg-4 col-md-8 col-sm-10">
-                <div class="single-pricing wow fadeInUp" data-wow-delay=".6s"
-                    style="visibility: visible; animation-delay: 0.6s; animation-name: fadeInUp;">
-                    <div class="image">
-                        <img src="{{ Vite::asset('resources/img/home/pricing-3.svg') }}" alt="">
-                    </div>
-                    <h6>Pro Design</h6>
-                    <h4>Design &amp; Develop</h4>
-                    <h3>$ 199.00</h3>
-                    <ul>
-                        <li> <i class="lni lni-checkmark-circle"></i> Carefully crafted components</li>
-                        <li> <i class="lni lni-checkmark-circle"></i> Amazing page examples</li>
-                        <li> <i class="lni lni-checkmark-circle"></i> Super friendly support team</li>
-                        <li> <i class="lni lni-checkmark-circle"></i> Awesome Support</li>
-                    </ul>
-                    <a href="#0" class="button radius-30">Get Started</a>
-                </div>
-            </div>
+            @endforeach
         </div>
     </div>
 </section>

@@ -28,92 +28,35 @@
                         <thead>
                             <tr>
                                 <th></th>
+                                @foreach ($pricings as $row)
                                 <th>
-                                    <h6>Basic</h6>
-                                    <h3> <span>$</span> 19.00</h3>
-                                    <p>Monthly</p>
+                                    <h6>{{ $row->title }}</h6>
+                                    <h3>
+                                        @if (empty($row->price))
+                                            Custom
+                                        @else
+                                            {{ rupiah($row->price) }}
+                                        @endif
+                                    </h3>
                                 </th>
-                                <th>
-                                    <h6>Standard</h6>
-                                    <h3> <span>$</span> 39.00</h3>
-                                    <p>Yearly</p>
-                                </th>
-                                <th>
-                                    <h6>Premium</h6>
-                                    <h3> <span>$</span> 59.00</h3>
-                                    <p>Yearly</p>
-                                </th>
+                                @endforeach
                             </tr>
                         </thead>
                         <tbody>
+                            @foreach ($items as $key => $rows)
                             <tr>
                                 <td>
-                                    <p>Carefully crafted components</p>
+                                    <p>{{ $key }}</p>
                                 </td>
+                                @foreach ($rows as $item)
                                 <td>
-                                    <p class="icon active"><i class="lni lni-checkmark-circle"></i></p>
+                                    <p @class(['icon', 'active' => $item, 'text-danger' => !$item])>
+                                        <i @class(['lni', 'lni-checkmark-circle' => $item, 'lni-cross-circle text-danger' => !$item])></i>
+                                    </p>
                                 </td>
-                                <td>
-                                    <p class="icon active"><i class="lni lni-checkmark-circle"></i></p>
-                                </td>
-                                <td>
-                                    <p class="icon active"><i class="lni lni-checkmark-circle"></i></p>
-                                </td>
+                                @endforeach
                             </tr>
-                            <tr>
-                                <td>
-                                    <p>Amazing page examples</p>
-                                </td>
-                                <td>
-                                    <p class="icon"><i class="lni lni-checkmark-circle"></i></p>
-                                </td>
-                                <td>
-                                    <p class="icon active"><i class="lni lni-checkmark-circle"></i></p>
-                                </td>
-                                <td>
-                                    <p class="icon active"><i class="lni lni-checkmark-circle"></i></p>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <p>Super friendly support team</p>
-                                </td>
-                                <td>
-                                    <p class="icon active"><i class="lni lni-checkmark-circle"></i></p>
-                                </td>
-                                <td>
-                                    <p class="icon active"><i class="lni lni-checkmark-circle"></i></p>
-                                </td>
-                                <td>
-                                    <p class="icon active"><i class="lni lni-checkmark-circle"></i></p>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <p>Awesome Support</p>
-                                </td>
-                                <td>
-                                    <p class="icon active"><i class="lni lni-checkmark-circle"></i></p>
-                                </td>
-                                <td>
-                                    <p class="icon active"><i class="lni lni-checkmark-circle"></i></p>
-                                </td>
-                                <td>
-                                    <p class="icon active"><i class="lni lni-checkmark-circle"></i></p>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td class="pricing-button">
-                                    <a href="#0" class="button border-button radius-10">Buy Basic</a>
-                                </td>
-                                <td class="pricing-button">
-                                    <a href="#0" class="button border-button radius-10">Buy Standard</a>
-                                </td>
-                                <td class="pricing-button">
-                                    <a href="#0" class="button radius-10">Buy Premium</a>
-                                </td>
-                            </tr>
+                            @endforeach
                         </tbody>
                     </table>
                 </div>

@@ -1,10 +1,11 @@
 <?php
 
 use App\Http\Controllers\Dashboard\AuthController;
-use App\Http\Controllers\Dashboard\HomeController;
+use App\Http\Controllers\Dashboard\HomeController as DashboardController;
 use App\Http\Controllers\Dashboard\PlanController;
 use App\Http\Controllers\Dashboard\PortfolioController;
 use App\Http\Controllers\Dashboard\TestimonialController;
+use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -19,17 +20,15 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::middleware([])
+    ->controller(HomeController::class)
     ->group(function () {
-        Route::get('/', function () {
-            return view('landing-page.home.home');
-        })->name('home');
-
-        Route::get('/portfolio', function () { return view('landing-page.portfolio.portfolio');})
+        Route::get('/', 'home')
+            ->name('home');
+        Route::get('/portfolio', 'portfolio')
             ->name('portfolio');
-        Route::get('/pricing', function () { return view('landing-page.pricing.pricing');})
+        Route::get('/pricing', 'pricing')
             ->name('pricing');
-
-        Route::get('/template', function () { return view('landing-page.template.template');})
+        Route::get('/template', 'template')
             ->name('template');
     });
 
@@ -37,7 +36,7 @@ Route::middleware(['auth'])
     ->prefix('dashboard')
     ->name('dashboard.')
     ->group(function () {
-        Route::controller(HomeController::class)
+        Route::controller(DashboardController::class)
             ->group(function () {
                 Route::get('/', 'index')->name('home');
             });

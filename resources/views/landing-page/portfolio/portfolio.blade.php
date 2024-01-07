@@ -23,132 +23,45 @@
                     style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInDown;">
                     <div class="portfolio-button-wrapper">
                         <button class="portfolio-btn active" data-filter="*">All</button>
-                        <button class="portfolio-btn" data-filter=".web">Web Design</button>
-                        <button class="portfolio-btn" data-filter=".dev">Web Development</button>
-                        <button class="portfolio-btn" data-filter=".app">Mobile App</button>
-                        <button class="portfolio-btn" data-filter=".branding">Branding</button>
-                        <button class="portfolio-btn" data-filter=".illustration">Illustration</button>
+                        @foreach ($tags as $row)
+                            <button class="portfolio-btn" data-filter=".{{ Str::slug($row) }}">{{ $row }}</button>
+                        @endforeach
                     </div>
                 </div>
             </div>
             <div class="row gallery-5 wow fadeInUp" data-wow-delay=".2s"
                 style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
-                <div class="col-lg-4 col-md-6 gallery-item web branding">
-                    <div class="single-gallery">
-                        <div class="image">
-                            <img src="{{ Vite::asset('resources/img/gallery-1.jpg') }}" alt="">
-                        </div>
-                        <div class="overlay">
-                            <div class="overlay-content">
-                                <div class="info">
-                                    <h5>Business</h5>
-                                    <p>Short description for the ones who look for something new. Awesome!</p>
-                                </div>
-                                <div class="action">
-                                    <a href="#0"> <i class="lni lni-link"></i> </a>
+                @foreach ($portfolios as $row)
+                    @php
+                        $currentTags = collect($row->tags)->implode(fn ($tag) => Str::slug($tag->name), ' ');
+                    @endphp
+                    <div class="col-lg-4 col-md-6 gallery-item {{ $currentTags }}">
+                        <div class="single-gallery">
+                            <div class="image">
+                                <img src="{{ asset('storage/' . $row->thumbnail) }}" alt="{{ $row->title }}">
+                            </div>
+                            <div class="overlay">
+                                <div class="overlay-content">
+                                    <div class="info">
+                                        <h5>{{ $row->title }}</h5>
+                                        <p>{{ $row->description }}</p>
+                                    </div>
+                                    <div class="action">
+                                        <a href="{{ asset('storage/' . $row->image) }}" target="_blank"> <i class="lni lni-link"></i> </a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-4 col-md-6 gallery-item dev app illustration">
-                    <div class="single-gallery">
-                        <div class="image">
-                            <img src="{{ Vite::asset('resources/img/gallery-2.jpg') }}" alt="">
-                        </div>
-                        <div class="overlay">
-                            <div class="overlay-content">
-                                <div class="info">
-                                    <h5>Business</h5>
-                                    <p>Short description for the ones who look for something new. Awesome!</p>
-                                </div>
-                                <div class="action">
-                                    <a href="#0"> <i class="lni lni-link"></i> </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 gallery-item branding illustration">
-                    <div class="single-gallery">
-                        <div class="image">
-                            <img src="{{ Vite::asset('resources/img/gallery-3.jpg') }}" alt="">
-                        </div>
-                        <div class="overlay">
-                            <div class="overlay-content">
-                                <div class="info">
-                                    <h5>Business</h5>
-                                    <p>Short description for the ones who look for something new. Awesome!</p>
-                                </div>
-                                <div class="action">
-                                    <a href="#0"> <i class="lni lni-link"></i> </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 gallery-item web illustration">
-                    <div class="single-gallery">
-                        <div class="image">
-                            <img src="{{ Vite::asset('resources/img/gallery-5.jpg') }}" alt="">
-                        </div>
-                        <div class="overlay">
-                            <div class="overlay-content">
-                                <div class="info">
-                                    <h5>Business</h5>
-                                    <p>Short description for the ones who look for something new. Awesome!</p>
-                                </div>
-                                <div class="action">
-                                    <a href="#0"> <i class="lni lni-link"></i> </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 gallery-item web app branding">
-                    <div class="single-gallery">
-                        <div class="image">
-                            <img src="{{ Vite::asset('resources/img/gallery-6.jpg') }}" alt="">
-                        </div>
-                        <div class="overlay">
-                            <div class="overlay-content">
-                                <div class="info">
-                                    <h5>Business</h5>
-                                    <p>Short description for the ones who look for something new. Awesome!</p>
-                                </div>
-                                <div class="action">
-                                    <a href="#0"> <i class="lni lni-link"></i> </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 gallery-item web dev app">
-                    <div class="single-gallery">
-                        <div class="image">
-                            <img src="{{ Vite::asset('resources/img/gallery-4.jpg') }}" alt="">
-                        </div>
-                        <div class="overlay">
-                            <div class="overlay-content">
-                                <div class="info">
-                                    <h5>Business</h5>
-                                    <p>Short description for the ones who look for something new. Awesome!</p>
-                                </div>
-                                <div class="action">
-                                    <a href="#0"> <i class="lni lni-link"></i> </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                @endforeach
             </div>
         </div>
     </section>
 @endsection
 
 @push('js')
-<script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
-<script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+    <script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
 @endpush
 
 @push('deferJs')

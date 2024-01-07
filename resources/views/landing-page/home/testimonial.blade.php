@@ -17,90 +17,26 @@
                                 data-controls="next" tabindex="-1" aria-controls="tns1"><i
                                     class="lni lni-chevron-right prev"></i></button></div>
                         <div class="tns-liveregion tns-visually-hidden" aria-live="polite" aria-atomic="true">
-                            slide <span class="current">5</span> of 2</div>
+                            slide <span class="current">1</span> of {{ $testimonials->count() }}</div>
                         <div id="tns1-mw" class="tns-ovh">
                             <div class="tns-inner" id="tns1-iw">
                                 <div class="testimonial-active-3  tns-slider tns-carousel tns-subpixel tns-calc tns-horizontal"
                                     id="tns1" style="transform: translate3d(-66.6667%, 0px, 0px);">
-                                    <div class="single-testimonial tns-item tns-slide-cloned " aria-hidden="true"
-                                        tabindex="-1">
-                                        <div class="section-title mb-40">
-                                            <h2>Testimonial</h2>
-                                        </div>
-                                        <div class="content">
-                                            <p>Perfect Coding telah membantu kami mengembangkan aplikasi yang luar
-                                                biasa. Mereka benar-benar memahami kebutuhan kami dan memberikan solusi
-                                                yang tepat.</p>
-                                        </div>
-                                        <div class="info">
-                                            <h5>Budi Santoso</h5>
-                                            <p>CEO di PT. Maju Mundur</p>
-                                        </div>
+                                    @foreach ($testimonials as $row)
+                                    <div class="single-testimonial tns-item" aria-hidden="true"
+                                    tabindex="-1">
+                                    <div class="section-title mb-40">
+                                        <h2>Testimonial</h2>
                                     </div>
-                                    <div class="single-testimonial tns-item tns-slide-cloned " aria-hidden="true"
-                                        tabindex="-1">
-                                        <div class="section-title mb-40">
-                                            <h2>Testimonial</h2>
-                                        </div>
-                                        <div class="content">
-                                            <p>Saya sangat terkesan dengan kecepatan dan kualitas pekerjaan Perfect Coding. Mereka benar-benar membantu bisnis saya tumbuh.</p>
-                                        </div>
-                                        <div class="info">
-                                            <h5>Dewi Sartika</h5>
-                                            <p>Pemilik Toko Online Dewi’s Shop</p>
-                                        </div>
+                                    <div class="content">
+                                        <p>{{ $row->content }}</p>
                                     </div>
-                                    <div class="single-testimonial tns-item " id="tns1-item0 " aria-hidden="true"
-                                        tabindex="-1">
-                                        <div class="section-title mb-40">
-                                            <h2>Testimonial</h2>
-                                        </div>
-                                        <div class="content">
-                                            <p>Tim di Perfect Coding sangat profesional dan mudah diajak bekerja sama. Mereka selalu ada untuk menjawab pertanyaan saya dan memberikan saran yang berharga.</p>
-                                        </div>
-                                        <div class="info">
-                                            <h5>Agus Pranoto</h5>
-                                            <p>Manajer Proyek di PT. Sejahtera Abadi</p>
-                                        </div>
+                                    <div class="info">
+                                        <h5>{{ $row->fullname }}</h5>
+                                        <p>{{ $row->job_title }}</p>
                                     </div>
-                                    <div class="single-testimonial tns-item " id="tns1-item1 " aria-hidden="true"
-                                        tabindex="-1">
-                                        <div class="section-title mb-40">
-                                            <h2>Testimonial</h2>
-                                        </div>
-                                        <div class="content">
-                                            <p>Saya sangat merekomendasikan Perfect Coding untuk semua kebutuhan pengembangan aplikasi Anda. Mereka benar-benar tahu apa yang mereka lakukan.</p>
-                                        </div>
-                                        <div class="info">
-                                            <h5>Ratna Dewi</h5>
-                                            <p>Pendiri Startup Edukasi Anak Genius</p>
-                                        </div>
-                                    </div>
-                                    <div class="single-testimonial tns-item tns-slide-cloned tns-slide-active">
-                                        <div class="section-title mb-40">
-                                            <h2>Testimonial</h2>
-                                        </div>
-                                        <div class="content">
-                                            <p>Perfect Coding telah menjadi partner yang luar biasa dalam proyek kami. Mereka selalu memberikan hasil yang melebihi ekspektasi.</p>
-                                        </div>
-                                        <div class="info">
-                                            <h5>Eko Prasetyo</h5>
-                                            <p>Direktur Teknologi di PT. Inovasi Digital Indonesia</p>
-                                        </div>
-                                    </div>
-                                    <div class="single-testimonial tns-item tns-slide-cloned " aria-hidden="true"
-                                        tabindex="-1">
-                                        <div class="section-title mb-40">
-                                            <h2>Testimonial</h2>
-                                        </div>
-                                        <div class="content">
-                                            <p>Saya sangat puas dengan layanan Perfect Coding. Mereka selalu memberikan solusi yang inovatif dan efisien untuk bisnis saya.</p>
-                                        </div>
-                                        <div class="info">
-                                            <h5>Siti Aminah</h5>
-                                            <p>CEO di PT. Kuliner Nusantara</p>
-                                        </div>
-                                    </div>
+                                </div>
+                                    @endforeach
                                 </div>
                             </div>
                         </div>
