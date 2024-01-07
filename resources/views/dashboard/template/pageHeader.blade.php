@@ -14,11 +14,11 @@
             <!-- Page title actions -->
             <div class="col-auto ms-auto d-print-none">
                 <div class="btn-list">
-                    <span class="d-none d-sm-inline">
+                    {{-- <span class="d-none d-sm-inline">
                         <a href="" class="btn">
                             Settings
                         </a>
-                    </span>
+                    </span> --}}
                     <button type="button" class="btn btn-primary d-none d-sm-inline-block" data-bs-toggle="modal"
                         data-bs-target="#modal-template">
                         <i class="ti ti-plus icon"></i>

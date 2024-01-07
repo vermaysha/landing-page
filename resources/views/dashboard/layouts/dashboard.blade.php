@@ -112,7 +112,7 @@
                                 </span>
                             </a>
                         </li>
-                        <li class="nav-item">
+                        {{-- <li class="nav-item">
                             <a class="nav-link" href="{{ route('dashboard.home') }}">
                                 <span class="nav-link-icon d-md-none d-lg-inline-block">
                                     <div class="icon ti ti-settings"></div>
@@ -121,7 +121,7 @@
                                     Setting
                                 </span>
                             </a>
-                        </li>
+                        </li> --}}
                     </ul>
                 </div>
             </div>
