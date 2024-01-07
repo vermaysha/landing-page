@@ -21,7 +21,7 @@
                                     <ul id="nav2" class="navbar-nav ml-auto">
                                         @include('landing-page.navbar')
                                     </ul>
-                                    <a href="#0" class="button button-sm radius-10 d-none d-lg-flex">Kontak</a>
+                                    <a href="https://api.whatsapp.com/send/?phone=6287765299386&text=Halo+Perfect+Coding%2C+Saya+(Nama)+dari+(Kota)+mau+bikin..." class="button button-sm radius-10 d-none d-lg-flex">Kontak</a>
                                 </div>
                             </div>
                         </nav>
@@ -52,7 +52,7 @@
                             rumah bagi inovasi. Kami membantu Anda merancang dan membangun aplikasi yang tidak hanya memenuhi
                             kebutuhan Anda, tetapi juga melampaui ekspektasi.</p>
                         <div class="buttons">
-                            <a href="#0" class="button button-lg radius-50 wow fadeInUp" data-wow-delay=".7s"
+                            <a href="https://api.whatsapp.com/send/?phone=6287765299386&text=Halo+Perfect+Coding%2C+Saya+(Nama)+dari+(Kota)+mau+bikin..." class="button button-lg radius-50 wow fadeInUp" data-wow-delay=".7s"
                                 style="visibility: visible; animation-delay: 0.7s; animation-name: fadeInUp;">Get
                                 Started <i class="lni lni-chevron-right"></i></a>
                             {{-- <a href="#" class="video-button glightbox wow fadeInUp" data-wow-delay=".8s"

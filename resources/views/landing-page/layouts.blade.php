@@ -110,43 +110,10 @@
                             </div>
                         </div>
                     </div>
-                    {{-- <div class="col-xl-2 offset-xl-1 col-lg-2 col-md-6 col-sm-6">
-                        <div class="footer-widget">
-                            <h6>Quick Link</h6>
-                            <ul class="links">
-                                <li> <a href="#0">Home</a> </li>
-                                <li> <a href="#0">About</a> </li>
-                                <li> <a href="#0">Service</a> </li>
-                                <li> <a href="#0">Testimonial</a> </li>
-                                <li> <a href="#0">Contact</a> </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-xl-2 col-lg-2 col-md-6 col-sm-6">
-                        <div class="footer-widget">
-                            <h6>Services</h6>
-                            <ul class="links">
-                                <li> <a href="#0">Web Design</a> </li>
-                                <li> <a href="#0">Web Development</a> </li>
-                                <li> <a href="#0">Seo Optimization</a> </li>
-                                <li> <a href="#0">Blog Writing</a> </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-xl-4 col-lg-4 col-md-6">
-                        <div class="footer-widget">
-                            <h6>Subscribe Newsletter</h6>
-                            <form action="#" class="subscribe-form">
-                                <input type="email" name="subs-email" id="subs-email"
-                                    placeholder="Yourmail@gmail.com">
-                                <button class="button button-lg radius-3">Subscribe Now</button>
-                            </form>
-                        </div>
-                    </div> --}}
                 </div>
             </div>
             <div class="copyright-wrapper">
-                <p>Design and Developed by <a href="https://uideck.com" rel="nofollow" target="_blank">UIdeck</a></p>
+                <p>Copyright &copy; {{ now()->format('Y') }} Perfect Coding. All Right Reserved</p>
             </div>
         </div>
     </footer>
