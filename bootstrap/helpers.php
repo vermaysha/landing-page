@@ -10,6 +10,7 @@ function rupiah(mixed $angka): string|null {
     if (!is_numeric($angka)) {
         return $angka;
     }
-    $rupiah = "Rp" . number_format($angka,2,',','.');
+
+    $rupiah = "Rp" . number_format($angka, 0, ', ', '.');
     return $rupiah;
 }
