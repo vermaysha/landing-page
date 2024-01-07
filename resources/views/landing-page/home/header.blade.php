@@ -21,7 +21,7 @@
                                     <ul id="nav2" class="navbar-nav ml-auto">
                                         @include('landing-page.navbar')
                                     </ul>
-                                    <a href="https://api.whatsapp.com/send/?phone=6287765299386&text=Halo+Perfect+Coding%2C+Saya+(Nama)+dari+(Kota)+mau+bikin..." class="button button-sm radius-10 d-none d-lg-flex">Kontak</a>
+                                    <a target="_blank" href="https://api.whatsapp.com/send/?phone=6287765299386&text=Halo+Perfect+Coding%2C+Saya+(Nama)+dari+(Kota)+mau+bikin..." class="button button-sm radius-10 d-none d-lg-flex">Kontak</a>
                                 </div>
                             </div>
                         </nav>

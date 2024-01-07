@@ -45,7 +45,7 @@
                         </div>
                         <div class="wow fadeInUp" data-wow-delay=".2s"
                             style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
-                            <a href="https://api.whatsapp.com/send/?phone=6287765299386&text=Halo+Perfect+Coding%2C+Saya+(Nama)+dari+(Kota)+mau+bikin..." class="read-more-button">Read more</a>
+                            <a target="_blank" href="https://api.whatsapp.com/send/?phone=6287765299386&text=Halo+Perfect+Coding%2C+Saya+(Nama)+dari+(Kota)+mau+bikin..." class="read-more-button">Read more</a>
                         </div>
                     </div>
                 </div>

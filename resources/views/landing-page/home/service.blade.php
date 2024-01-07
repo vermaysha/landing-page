@@ -70,7 +70,7 @@
                         Anda. Dari Scraping hingga Konsultasi, kami berdedikasi untuk memberikan solusi yang inovatif
                         dan berkualitas. Dengan Perfect Coding, Anda dapat yakin bahwa Anda mendapatkan layanan terbaik
                         untuk membantu bisnis Anda tumbuh dan berkembang.</p>
-                    <a href="https://api.whatsapp.com/send/?phone=6287765299386&text=Halo+Perfect+Coding%2C+Saya+(Nama)+dari+(Kota)+mau+bikin..." class="button button-lg radius-10 wow fadeInUp" data-wow-delay=".65s"
+                    <a target="_blank" href="https://api.whatsapp.com/send/?phone=6287765299386&text=Halo+Perfect+Coding%2C+Saya+(Nama)+dari+(Kota)+mau+bikin..." class="button button-lg radius-10 wow fadeInUp" data-wow-delay=".65s"
                         style="visibility: visible; animation-delay: 0.65s; animation-name: fadeInUp;">Get Started</a>
                 </div>
             </div>

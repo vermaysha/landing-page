@@ -91,9 +91,9 @@
                         <div class="footer-widget">
                             <h6>Contact Info</h6>
                             <ul class="links">
-                                <li> <a href="https://facebook.com/perfectcoding.id">Instagram</a> </li>
-                                <li> <a href="https://www.instagram.com/perfectcoding.id">Facebook</a> </li>
-                                <li> <a
+                                <li> <a target="_blank" href="https://facebook.com/perfectcoding.id">Instagram</a> </li>
+                                <li> <a target="_blank" href="https://www.instagram.com/perfectcoding.id">Facebook</a> </li>
+                                <li> <a target="_blank"
                                         href="https://api.whatsapp.com/send/?phone=6287765299386&text=Halo+Perfect+Coding%2C+Saya+(Nama)+dari+(Kota)+mau+bikin...">Whatsapp</a>
                                 </li>
                                 <li> <a href="tel:6287765299386">+62 8776 5299 386</a></li>

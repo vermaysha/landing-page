@@ -35,7 +35,7 @@
                             </li>
                         @endforeach
                     </ul>
-                    <a href="https://api.whatsapp.com/send/?phone=6287765299386&text=Halo+Perfect+Coding%2C+Saya+(Nama)+dari+(Kota)+mau+bikin..." class="button radius-30">Get Started</a>
+                    <a target="_blank" href="https://api.whatsapp.com/send/?phone=6287765299386&text=Halo+Perfect+Coding%2C+Saya+(Nama)+dari+(Kota)+mau+bikin..." class="button radius-30">Get Started</a>
                 </div>
             </div>
             @endforeach
