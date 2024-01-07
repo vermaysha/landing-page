@@ -35,7 +35,7 @@
                     }
 
                     h3 {
-                        color: #2f80ed;
+                        color: $primary-color;
 
                         span {
                             font-size: 20px;
@@ -44,7 +44,7 @@
 
                     p {
                         font-weight: 500;
-                        color: #323450;
+                        color: $heading-color;
                     }
                 }
 
@@ -54,11 +54,11 @@
 
                 tr td p.icon {
                     text-align: center;
-                    color: #585978;
+                    color: $body-color;
                     font-weight: 700;
 
                     &.active {
-                        color: #2f80ed;
+                        color: $primary-color;
                     }
                 }
             }
