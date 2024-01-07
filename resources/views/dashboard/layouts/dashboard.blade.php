@@ -103,6 +103,16 @@
                             </a>
                         </li>
                         <li class="nav-item">
+                            <a class="nav-link" href="{{ route('dashboard.template.index') }}">
+                                <span class="nav-link-icon d-md-none d-lg-inline-block">
+                                    <div class="icon ti ti-template"></div>
+                                </span>
+                                <span class="nav-link-title">
+                                    Template
+                                </span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
                             <a class="nav-link" href="{{ route('dashboard.home') }}">
                                 <span class="nav-link-icon d-md-none d-lg-inline-block">
                                     <div class="icon ti ti-settings"></div>

@@ -4,6 +4,7 @@ use App\Http\Controllers\Dashboard\AuthController;
 use App\Http\Controllers\Dashboard\HomeController as DashboardController;
 use App\Http\Controllers\Dashboard\PlanController;
 use App\Http\Controllers\Dashboard\PortfolioController;
+use App\Http\Controllers\Dashboard\TemplateController;
 use App\Http\Controllers\Dashboard\TestimonialController;
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
@@ -67,6 +68,16 @@ Route::middleware(['auth'])
         Route::controller(PortfolioController::class)
             ->prefix('portfolio')
             ->name('portfolio.')
+            ->group(function () {
+                Route::get('/', 'index')->name('index');
+                Route::post('/', 'store')->name('store');
+                Route::post('/{id}', 'update')->name('update');
+                Route::delete('/{id}', 'delete')->name('delete');
+            });
+
+        Route::controller(TemplateController::class)
+            ->prefix('template')
+            ->name('template.')
             ->group(function () {
                 Route::get('/', 'index')->name('index');
                 Route::post('/', 'store')->name('store');

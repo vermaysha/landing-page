@@ -94,6 +94,13 @@ class PortfolioController extends Controller
             ->with('success', 'Portfolio updated successfully');
     }
 
+    /**
+     * Deletes a portfolio.
+     *
+     * @param Request $request The HTTP request object.
+     * @param int $portfolioId The ID of the portfolio to delete.
+     * @return RedirectResponse The redirect response after deleting the portfolio.
+     */
     public function delete(Request $request, int $portfolioId): RedirectResponse
     {
         $portfolio = $this->portfolioService->findById($portfolioId);

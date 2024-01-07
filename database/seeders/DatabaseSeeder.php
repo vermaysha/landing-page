@@ -25,6 +25,7 @@ class DatabaseSeeder extends Seeder
             TestimonialSeeder::class,
             PlanSeeder::class,
             PortfolioSeeder::class,
+            TemplateSeeder::class,
         ]);
     }
 }

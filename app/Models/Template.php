@@ -4,14 +4,13 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Spatie\Tags\HasTags;
 
 /**
- * @mixin IdeHelperPortfolio
+ * @mixin IdeHelperTemplate
  */
-class Portfolio extends Model
+class Template extends Model
 {
-    use HasFactory, HasTags;
+    use HasFactory;
 
     /**
      * The attributes that are mass assignable.
@@ -22,7 +21,6 @@ class Portfolio extends Model
         'thumbnail',
         'image',
         'title',
-        'slug',
         'description',
     ];
 }

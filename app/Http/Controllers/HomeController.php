@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Services\PlanService;
 use App\Services\PortfolioService;
+use App\Services\TemplateService;
 use App\Services\TestimonialService;
 use Illuminate\Contracts\View\View;
 use Illuminate\Http\Request;
@@ -20,7 +21,8 @@ class HomeController extends Controller
     public function __construct(
         private readonly PlanService $planService,
         private readonly PortfolioService $portfolioService,
-        private readonly TestimonialService $testimonialService
+        private readonly TestimonialService $testimonialService,
+        private readonly TemplateService $templateService,
     ) {
     }
 
@@ -61,7 +63,9 @@ class HomeController extends Controller
      */
     public function template(Request $request): View
     {
-        return view('landing-page.template.template');
+        $templates = $this->templateService->get();
+
+        return view('landing-page.template.template', compact('templates'));
     }
 
     /**

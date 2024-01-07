@@ -1,11 +1,11 @@
-<div class="modal modal-blur fade" id="modal-portfolio" tabindex="-1" role="dialog" aria-hidden="true"
+<div class="modal modal-blur fade" id="modal-template" tabindex="-1" role="dialog" aria-hidden="true"
     data-bs-backdrop="static" data-bs-keyboard="false">
-    <form action="{{ route('dashboard.portfolio.store') }}" method="post" enctype="multipart/form-data">
+    <form action="{{ route('dashboard.template.store') }}" method="post" enctype="multipart/form-data">
         @csrf
         <div class="modal-dialog modal-lg modal-fullscreen-lg-down modal-dialog-scrollable" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title">New Portfolio</h5>
+                    <h5 class="modal-title">New Template</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
@@ -13,7 +13,7 @@
                         <div class="col-12">
                             <div class="mb-3">
                                 <label class="form-label">Title</label>
-                                <input type="text" class="form-control" placeholder="Portfolio title" required
+                                <input type="text" class="form-control" placeholder="Template title" required
                                     name="title" value="{{ old('title') }}">
                             </div>
                         </div>
@@ -21,13 +21,6 @@
                             <div class="mb-3">
                                 <label class="form-label">Description</label>
                                 <textarea name="description" class="form-control" placeholder="Short description" required>{{ old('description') }}</textarea>
-                            </div>
-                        </div>
-                        <div class="col-12">
-                            <div class="mb-3">
-                                <label class="form-label">Tags</label>
-                                <input type="text" name="tags" class="form-control"
-                                    placeholder="Select or type your tags" required value="{{ old('tags') }}">
                             </div>
                         </div>
                         <div class="col-12">
@@ -50,7 +43,7 @@
                     </button>
                     <button type="submit" class="btn btn-primary ms-auto">
                         <i class="ti ti-plus icon"></i>
-                        Create new portfolio
+                        Create new template
                     </button>
                 </div>
             </div>
