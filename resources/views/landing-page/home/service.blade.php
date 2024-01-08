@@ -10,24 +10,27 @@
                                 <i class="lni lni-vector"></i>
                             </div>
                             <div class="content">
-                                <h5>Scraping</h5>
-                                <p>Anda dapat menggali data dari website pilihan Anda.
-                                    Kami membantu Anda mengekstrak informasi penting yang Anda butuhkan untuk membuat
-                                    keputusan bisnis yang lebih baik.</p>
+                                <h5>Toko Online</h5>
+                                <p>
+                                    Kami membantu Anda membuat toko online yang mudah diakses dan efisien. Kami
+                                    menawarkan fitur yang dapat membantu Anda membuat keputusan bisnis yang lebih
+                                    efektif dan efisien. Segera tingkatkan penjualan penjualan Anda!
+                                </p>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-md-6 -mt-30">
                         <div class="single-feature wow fadeInUp" data-wow-delay=".3s"
                             style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;">
                             <div class="icon">
                                 <i class="lni lni-code-alt"></i>
                             </div>
                             <div class="content">
-                                <h5>Web Development</h5>
-                                <p>Kami membantu Anda menciptakan aplikasi yang Anda
-                                    butuhkan, mulai dari sistem pegawai, toko online, hingga landing page. Kami membantu
-                                    Anda mewujudkan ide Anda menjadi realitas.</p>
+                                <h5>Integrasi Sistem</h5>
+                                <p>Kami memungkinkan Anda untuk mengintegrasikan berbagai sistem seperti Payment
+                                    Gateway, Chat Bot System dan lainnya. Kami membantu Anda menciptakan sistem yang
+                                    terintegrasi dan efisien. Segera nikmati kemudahan bekerja!</p>
+
                             </div>
                         </div>
                     </div>
@@ -38,20 +41,25 @@
                                 <i class="lni lni-layers"></i>
                             </div>
                             <div class="content">
-                                <h5>Integrasi Sistem</h5>
-                                <p>Kami memungkinkan Anda untuk mengintegrasikan berbagai sistem seperti payment gateway, chat bot system, dan lainnya. Kami membantu Anda menciptakan sistem yang terintegrasi dan efisien.</p>
+                                <h5>Landing Page</h5>
+                                <p>Kami membantu Anda membuat Landing Page yang menarik dan efektif yang sesuai dengan
+                                    bisnis Anda. Kami menawarkan fitur yang dapat membantu Anda untuk meningkatkan
+                                    insight bisnis Anda. Segera dapatkan insight menarik dari bisnis Anda!</p>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-md-6 -mt-30">
                         <div class="single-feature wow fadeInUp" data-wow-delay=".5s"
                             style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInUp;">
                             <div class="icon">
                                 <i class="lni lni-whatsapp"></i>
                             </div>
                             <div class="content">
-                                <h5>Konsultasi Gratis</h5>
-                                <p>Jika Anda masih bingung atau belum yakin dengan sistem yang akan dibuat, layanan Konsultasi kami siap membantu. Kami akan memberikan saran dan panduan untuk membantu Anda membuat keputusan yang tepat untuk bisnis Anda.</p>
+                                <h5>Web Scraping</h5>
+                                <p> Kami membantu Anda mengekstrak informasi penting yang Anda butuhkan untuk membuat
+                                    keputusan bisnis yang lebih baik melalui E-Commerce, Social Media dan lainnya.
+                                    Rekomendasi untuk Anda yang sedang melakukan
+                                    Product Research.</p>
                             </div>
                         </div>
                     </div>
@@ -70,8 +78,10 @@
                         Anda. Dari Scraping hingga Konsultasi, kami berdedikasi untuk memberikan solusi yang inovatif
                         dan berkualitas. Dengan Perfect Coding, Anda dapat yakin bahwa Anda mendapatkan layanan terbaik
                         untuk membantu bisnis Anda tumbuh dan berkembang.</p>
-                    <a target="_blank" href="https://api.whatsapp.com/send/?phone=6287765299386&text=Halo+Perfect+Coding%2C+Saya+(Nama)+dari+(Kota)+mau+bikin..." class="button button-lg radius-10 wow fadeInUp" data-wow-delay=".65s"
-                        style="visibility: visible; animation-delay: 0.65s; animation-name: fadeInUp;">Get Started</a>
+                    <a target="_blank"
+                        href="https://api.whatsapp.com/send/?phone=6287765299386&text=Halo+Perfect+Coding%2C+Saya+(Nama)+dari+(Kota)+mau+bikin..."
+                        class="button button-lg radius-10 wow fadeInUp" data-wow-delay=".65s"
+                        style="visibility: visible; animation-delay: 0.65s; animation-name: fadeInUp;">Hubungi Kami</a>
                 </div>
             </div>
         </div>

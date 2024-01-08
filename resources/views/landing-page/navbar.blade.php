@@ -1,11 +1,11 @@
 <li class="nav-item">
     <a class="page-scroll" href="{{ route('home') }}">Home</a>
 </li>
-<li class="nav-item">
+{{-- <li class="nav-item">
     <a class="page-scroll" href="{{ route('home') }}#about">About</a>
-</li>
+</li> --}}
 <li class="nav-item">
-    <a class="page-scroll" href="{{ route('home') }}#services">Services</a>
+    <a class="page-scroll" href="{{ route('home') }}#services">Layanan</a>
 </li>
 <li class="nav-item">
     <a class="page-scroll" href="{{ route('portfolio') }}">Portfolio</a>

@@ -2,6 +2,18 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}" class="no-js">
 
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-45CG3XF25G"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-45CG3XF25G');
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -19,6 +31,7 @@
         integrity="sha512-b42SanD3pNHoihKwgABd18JUZ2g9j423/frxIP5/gtYgfBz/0nDHGdY/3hi+3JwhSckM3JLklQ/T6tJmV7mZEw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet" />
+    <link rel="icon" href="{{ Vite::asset('resources/img/icon-perfectcoding2.png') }}" type="image/x-icon">
     <style>
         .mapouter {
             position: relative;
@@ -75,7 +88,7 @@
                             </div>
                             <p class="desc">“Perfect Coding” berdedikasi untuk membantu
                                 Anda mewujudkan visi digital Anda. Kami percaya bahwa setiap masalah
-                                memiliki solusi yang sempurna dalam kode. </p>
+                                memiliki solusi yang sempurna. </p>
                             <ul class="socials">
                                 <li> <a target="_blank" href="https://facebook.com/perfectcoding.id"> <i
                                             class="lni lni-facebook-fill"></i> </a> </li>
@@ -92,11 +105,12 @@
                             <h6>Contact Info</h6>
                             <ul class="links">
                                 <li> <a target="_blank" href="https://facebook.com/perfectcoding.id">Instagram</a> </li>
-                                <li> <a target="_blank" href="https://www.instagram.com/perfectcoding.id">Facebook</a> </li>
+                                <li> <a target="_blank" href="https://www.instagram.com/perfectcoding.id">Facebook</a>
+                                </li>
                                 <li> <a target="_blank"
                                         href="https://api.whatsapp.com/send/?phone=6287765299386&text=Halo+Perfect+Coding%2C+Saya+(Nama)+dari+(Kota)+mau+bikin...">Whatsapp</a>
                                 </li>
-                                <li> <a href="tel:6287765299386">+62 8776 5299 386</a></li>
+                                <li> <a href="tel:6287765299386" hidden>+62 8776 5299 386</a></li>
                             </ul>
                         </div>
                     </div>
@@ -105,8 +119,9 @@
                             <div class="gmap_canvas">
                                 <iframe class="gmap_iframe" width="100%" frameborder="0" scrolling="no"
                                     marginheight="0" marginwidth="0"
-                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31639.766201682967!2d110.77109117431642!3d-7.578159999999988!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a16783dbd32eb%3A0xe852ba0aa1842158!2sUniversitas%20Duta%20Bangsa!5e0!3m2!1sen!2sus!4v1704361072996!5m2!1sen!2sus">
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63282.313786212006!2d110.7776122133248!3d-7.5592070682909185!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a16627ad11ab1%3A0xe7fe4e0454bc3095!2sSurakarta%2C%20Kota%20Surakarta%2C%20Jawa%20Tengah!5e0!3m2!1sid!2sid!4v1704723819201!5m2!1sid!2sid">
                                 </iframe>
+
                             </div>
                         </div>
                     </div>
@@ -125,6 +140,8 @@
         })();
     </script>
     @stack('deferJs')
+
+
 </body>
 
 </html>

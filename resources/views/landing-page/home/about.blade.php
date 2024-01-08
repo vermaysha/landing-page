@@ -28,7 +28,8 @@
                             <div class="text">
                                 <h6 class="mb-10">Harga Bervariatif</h6>
                                 <p>Kami menawarkan berbagai pilihan harga yang bervariatif, dirancang untuk
-                                    memenuhi kebutuhan setiap individu dan bisnis. Apapun anggaran Anda, kami memiliki
+                                    memenuhi kebutuhan setiap individu dan bisnis. Berapapun anggaran Anda, kami
+                                    memiliki
                                     solusi yang tepat untuk Anda.
                                 </p>
                             </div>
@@ -40,12 +41,15 @@
                             </div>
                             <div class="text">
                                 <h6 class="mb-10">Konsultasi Gratis</h6>
-                                <p>No Mari bicarakan ide Anda dan temukan bagaimana kami dapat membantu mewujudkannya menjadi realitas. Konsultasi gratis, tanpa syarat apa pun</p>
+                                <p>No Mari bicarakan ide Anda dan temukan bagaimana kami dapat membantu mewujudkannya
+                                    menjadi realitas. Konsultasi gratis, tanpa syarat apa pun</p>
                             </div>
                         </div>
                         <div class="wow fadeInUp" data-wow-delay=".2s"
                             style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
-                            <a target="_blank" href="https://api.whatsapp.com/send/?phone=6287765299386&text=Halo+Perfect+Coding%2C+Saya+(Nama)+dari+(Kota)+mau+bikin..." class="read-more-button">Read more</a>
+                            <a target="_blank"
+                                href="https://api.whatsapp.com/send/?phone=6287765299386&text=Halo+Perfect+Coding%2C+Saya+(Nama)+dari+(Kota)+mau+bikin..."
+                                class="read-more-button">Layanan Cepat</a>
                         </div>
                     </div>
                 </div>

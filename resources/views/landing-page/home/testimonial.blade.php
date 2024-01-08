@@ -4,7 +4,7 @@
             <div class="col-lg-6">
                 <div class="testimonial-image wow fadeInUp" data-wow-delay=".2s"
                     style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
-                    <img src="{{ Vite::asset('resources/img/testimonial-img.png') }}" alt="" class="w-100">
+                    <img src="{{ Vite::asset('resources/img/technology-use.png') }}" alt="" class="w-100">
                 </div>
             </div>
             <div class="col-lg-6">
@@ -23,19 +23,19 @@
                                 <div class="testimonial-active-3  tns-slider tns-carousel tns-subpixel tns-calc tns-horizontal"
                                     id="tns1" style="transform: translate3d(-66.6667%, 0px, 0px);">
                                     @foreach ($testimonials as $row)
-                                    <div class="single-testimonial tns-item" aria-hidden="true"
-                                    tabindex="-1">
-                                    <div class="section-title mb-40">
-                                        <h2>Testimonial</h2>
-                                    </div>
-                                    <div class="content">
-                                        <p>{{ $row->content }}</p>
-                                    </div>
-                                    <div class="info">
-                                        <h5>{{ $row->fullname }}</h5>
-                                        <p>{{ $row->job_title }}</p>
-                                    </div>
-                                </div>
+                                        <div class="single-testimonial tns-item" aria-hidden="true" tabindex="-1">
+                                            <div class="section-title mb-40">
+                                                <h2>Teknologi Terbaik</h2>
+                                                <h6>Untuk klien kami</h6>
+                                            </div>
+                                            <div class="content">
+                                                <p>{{ $row->content }}</p>
+                                            </div>
+                                            <div class="info">
+                                                <h5>{{ $row->fullname }}</h5>
+                                                <p>{{ $row->job_title }}</p>
+                                            </div>
+                                        </div>
                                     @endforeach
                                 </div>
                             </div>

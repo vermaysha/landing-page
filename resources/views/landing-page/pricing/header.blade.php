@@ -41,7 +41,7 @@
                             terfokus, dirancang untuk memberikan solusi terbaik bagi bisnis Anda. Dengan berbagai
                             pilihan yang tersedia, Anda dapat memilih paket yang paling sesuai dengan anggaran dan
                             kebutuhan Anda</p>
-                        <a href="#pricing" class="button button-lg radius-50">Lihat Sekarang <i
+                        <a href="#pricing" class="button button-lg radius-50">Dapatkan Promo <i
                                 class="lni lni-chevron-down"></i> </a>
                     </div>
                 </div>
