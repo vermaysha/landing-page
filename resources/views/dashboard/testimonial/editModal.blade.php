@@ -1,5 +1,5 @@
-<div class="modal modal-blur fade" id="modal-testimonial-edit-{{ $row->id }}" tabindex="-1" role="dialog" aria-hidden="true"
-    data-bs-backdrop="static" data-bs-keyboard="false">
+<div class="modal modal-blur fade" id="modal-testimonial-edit-{{ $row->id }}" tabindex="-1" role="dialog"
+    aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
     <form action="{{ route('dashboard.testimonial.update', ['id' => $row->id]) }}" method="post">
         @csrf
         <div class="modal-dialog modal-lg" role="document">
@@ -13,13 +13,15 @@
                         <div class="col-lg-8">
                             <div class="mb-3">
                                 <label class="form-label">Fullname</label>
-                                <input type="text" class="form-control" placeholder="Client fullname" required name="fullname" value="{{ $row->fullname }}">
+                                <input type="text" class="form-control" placeholder="Client fullname" required
+                                    name="fullname" value="{{ $row->fullname }}">
                             </div>
                         </div>
                         <div class="col-lg-4">
                             <div class="mb-3">
                                 <label class="form-label">Job Title</label>
-                                <input type="text" class="form-control" placeholder="Client job title" required name="job_title" value="{{ $row->job_title }}">
+                                <input type="text" class="form-control" placeholder="Client job title" required
+                                    name="job_title" value="{{ $row->job_title }}">
                             </div>
                         </div>
                         <div class="col-lg-12">
@@ -36,7 +38,7 @@
                     </button>
                     <button type="submit" class="btn btn-primary ms-auto">
                         <i class="ti ti-plus icon"></i>
-                        Create new testimonial
+                        Update testimonial
                     </button>
                 </div>
             </div>
